@@ -58,7 +58,12 @@ button{
 }
 
 #msg1{
-    font-size: 3em;
+    font-size: 2em;
     text-transform: capitalize;
     margin-bottom: 0;
+    color: #fa946c;
+}
+
+#msg2{
+    
 }
