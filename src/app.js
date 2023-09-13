@@ -35,14 +35,6 @@ app.get('/about', (req,res)=>{
     });
 })
 
-app.get('/help', (req,res)=>{
-    res.render('help', {
-        help: 'I will help you.',
-        title: 'Help',
-        name: 'Kinshuk Chadha'
-    });
-})
-
 //app.com/weather
 app.get('/weather', (req, res) => {
 
@@ -72,27 +64,6 @@ app.get('/weather', (req, res) => {
     })
 })
 
-app.get('/products', (req,res)=>{
-
-    if(!req.query.search){
-        return res.send({
-            error: 'Please provide a search term'
-        })
-    }
-    console.log(req.query.search);
-    res.send({
-        products: []
-    })
-})
-
-//wildcard character if user is going thru help
-app.get('/help/*', (req,res)=>{
-    res.render('404', {
-        title: '404',
-        message: 'Help article not found!',
-        name: 'Kinshuk Chadha'
-    })
-})
 //404
 app.get('*', (req,res)=>{
     res.render('404', {
